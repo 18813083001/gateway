@@ -1,0 +1,11 @@
+spring:
+  mvc:
+    favicon:
+      enabled: false
+
+server:
+  port: 8081
+
+logging:
+  backup: /Users/chenlinsong
+  path: logs

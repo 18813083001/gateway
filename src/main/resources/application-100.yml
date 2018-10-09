@@ -1,0 +1,25 @@
+
+logging:
+  backup: /opt/pathology/backup/
+  path: /opt/pathology/logs/gateway
+
+zuul:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 50000
+    socket-timeout-millis: 50000
+
+  routes:
+    path-service:
+        path: /path/**
+        url: http://192.168.31.100:8082
+        stripPrefix: false
+        sensitiveHeaders:
+    insights-service:
+        path: /insights/**
+        url: http://192.168.31.100:8081
+        stripPrefix: false
+        sensitiveHeaders:
+
+
+

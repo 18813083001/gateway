@@ -1,0 +1,4 @@
+2018-09-22 08:31:08.071 : INFO [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] [Thread-9] Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@23c650a3: startup date [Fri Sep 21 18:40:11 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@3f9342d4
+2018-09-22 08:31:08.208 : INFO [org.springframework.cloud.netflix.zuul.ZuulFilterInitializer] [Thread-9] Stopping filter initializer
+2018-09-22 08:31:08.233 : INFO [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] [Thread-9] Unregistering JMX-exposed beans on shutdown
+2018-09-22 08:31:08.237 : INFO [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] [Thread-9] Unregistering JMX-exposed beans

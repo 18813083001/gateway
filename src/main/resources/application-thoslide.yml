@@ -1,0 +1,10 @@
+spring:
+  mvc:
+    favicon:
+      enabled: false
+server:
+  port: 50000
+logging:
+  backup: /opt/pathology/backup/
+  path: /opt/pathology/logs/gateway
+
