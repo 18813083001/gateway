@@ -3,8 +3,44 @@ spring:
     favicon:
       enabled: false
 server:
-  port: 50000
+  port: 8080
+  tomcat:
+    uriEncoding: UTF-8
+    compression:
+        enabled: true
+    maxHttpPostSize: 8388608
+    mime-types: text/html,text/css,application/json,application/javascript
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 200000
+
+ribbon:
+  ReadTimeout: 20000
+  ConnectTimeout: 20000
+
+zuul:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 50000
+    socket-timeout-millis: 50000
+
+  routes:
+    path-service:
+        path: /path/**
+        url: http://path:8080
+        stripPrefix: false
+        sensitiveHeaders:
+    insights-service:
+        path: /insights/**
+        url: http://insights:8080
+        stripPrefix: false
+        sensitiveHeaders:
+
 logging:
   backup: /opt/pathology/backup/
   path: /opt/pathology/logs/gateway
-

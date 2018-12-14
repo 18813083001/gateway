@@ -53,7 +53,7 @@
             <fileNamePattern>${log.dir}/debug.log.%d{yyyy-MM-dd}</fileNamePattern>
         </rollingPolicy>
     </appender>
-    <root level="DEBUG">
+    <root level="INFO">
         <appender-ref ref="console"/>
         <appender-ref ref="infoLog"/>
         <appender-ref ref="errorLog"/>

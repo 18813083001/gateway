@@ -16,7 +16,7 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
 group = 'com.thorough'
-version = '10.8.0-SNAPSHOT'
+version = '2018.11.22.0-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {

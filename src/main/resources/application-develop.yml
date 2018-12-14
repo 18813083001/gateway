@@ -2,10 +2,42 @@ spring:
   mvc:
     favicon:
       enabled: false
-
 server:
   port: 8081
+  tomcat:
+    uriEncoding: UTF-8
+    compression:
+        enabled: true
+    maxHttpPostSize: 8388608
+    mime-types: text/html,text/css,application/json,application/javascript
 
-logging:
-  backup: /Users/chenlinsong
-  path: logs
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 200000
+
+ribbon:
+  ReadTimeout: 20000
+  ConnectTimeout: 20000
+
+zuul:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 50000
+    socket-timeout-millis: 50000
+
+  routes:
+    path-service:
+        path: /path/**
+        url: http://localhost:8082
+        stripPrefix: false
+        sensitiveHeaders:
+    insights-service:
+        path: /insights/**
+        url: http://localhost:8083
+        stripPrefix: false
+        sensitiveHeaders:
+
